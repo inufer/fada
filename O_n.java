@@ -22,10 +22,12 @@ class O_n{
     private String[][][]part;    
     
     public O_n(int no,int p,int e, String[] a, int[] g,String[][] apr,String[][][] pa){      
-        n=no;
+        
+    	
+    	n=no;
         m=p;
         k=e;
-        int auxn;
+        int auxn,smg;
         anim= new String[n];
         grand=new int[n];
         aper=new String[(m-1)*k][3];
@@ -98,12 +100,7 @@ class O_n{
     	
     	
         int b = im.length;
-        
-        for (int w=0;w<b;w++) {
-        	System.out.print(nom[w]+" "+im[w]+"   ");
-        }
-        
-        System.out.print("\n");
+
   
         // el array salida contiene el arreglo ordenado 
         int salida1[] = new int[b]; 
@@ -112,15 +109,14 @@ class O_n{
         /* 
         crea el array que contiene el contador y lo inicializa en 0
         */
-        int cont[] = new int[1024]; 
-        for (int i = 0; i < 1024; ++i){
+        int cont[] = new int[256]; 
+        for (int i = 0; i < 256; ++i){
             cont[i] = 0; 
         }
         /*
         guarda la cuenta de cada caracter
         */
         for (int i = 0; i < b; i++){
-        	System.out.print(im[i]+" ");
             cont[im[i]]++; 
         }
   
@@ -128,7 +124,7 @@ class O_n{
         cambia el contador para que contenga la posicion real de
         la posicion del objeto en el arreglo
         */
-        for (int i = 1; i < 1024; i++){ 
+        for (int i = 1; i < 256; i++){ 
             cont[i] += cont[i - 1]; 
         }
   
@@ -159,8 +155,8 @@ class O_n{
         /* 
         crea el array que contiene el contador y lo inicializa en 0
         */
-        int cont[] = new int[1024]; 
-        for (int i = 0; i < 1024; ++i){
+        int cont[] = new int[256]; 
+        for (int i = 0; i < 256; ++i){
             cont[i] = 0; 
         }
   
@@ -175,7 +171,7 @@ class O_n{
         cambia el contador para que contenga la posicion real de
         la posicion del objeto en el arreglo
         */
-        for (int i = 1; i < 1024; i++){ 
+        for (int i = 1; i < 256; i++){ 
             cont[i] += cont[i - 1]; 
         }
   
