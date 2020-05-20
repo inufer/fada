@@ -25,11 +25,13 @@ public class main {
 		
 		System.out.print("prueba con complejidad n2 \n");
 		
-		O_n2 p1= new O_n2(n,m,k,animales,grandezas,apertura,partes);
+		O_n2 p2= new O_n2(n,m,k,animales,grandezas,apertura,partes);
 		
 		System.out.print("\n \n");
 		
 		System.out.print("prueba con complejidad nlogn \n");
+		
+		O_nlogn p3= new O_nlogn(n,m,k,animales,grandezas,apertura,partes);
 		
 		System.out.print("\n \n");
 		   
