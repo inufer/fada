@@ -1,4 +1,20 @@
+package ProyectoFada;
 
+import java.util.Arrays;
+
+/**
+ * para la complejidad O(n) se usara el counting sort para hacerlo,
+ * modificandolo para que ordene el array de los nombres en funcion de su
+ * importancia
+ * 
+ * @author CamiloRosero
+ * @author MariaArroyo
+ * @author JoseErazo
+ * 
+ */
+ 
+class O_n{ 
+    
     private int n,m,k;
     private String[] anim;
     private int[] grand,apar,pos;
@@ -136,21 +152,21 @@
                 }
                 
                 
+               
                 System.out.print("\n el animal que mas aparece es: \n");
-                int v = 0;
-                System.out.print( anim[v] +"\n ");
-                while(apar[v]==apar[v+1]) {
-                	System.out.print( anim[v+1] +"\n ");
-                	v++;
-                }
-                System.out.print("\n el animal que menos aparece es: \n");
-                v = n -1;
+                int v = n -1;
                 System.out.print( anim[v] +"\n ");
                 while(apar[v]==apar[v-1]) {
                 	System.out.print( anim[v-1] +"\n ");
                 	v--;
                 }
-                
+                System.out.print("\n el animal que menos aparece es: \n");
+                v = 0;
+                System.out.print( anim[v] +"\n ");
+                while(apar[v]==apar[v+1]) {
+                	System.out.print( anim[v+1] +"\n ");
+                	v++;
+                }
         
         
         
@@ -269,4 +285,3 @@
     
     
     
-}
