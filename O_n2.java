@@ -144,7 +144,7 @@ public class O_n2 {
 	    		int temp;
 	            String[] tmp= new String[3];
 	            int aux;
-	            int pi = a[h];  
+	            int pi = a[h-1];  
 	            int i = (l-1); 
 	            for (int j=l; j<h; j++) 
 	            { 
@@ -211,4 +211,3 @@ public class O_n2 {
 	    
 	    
 }
-
