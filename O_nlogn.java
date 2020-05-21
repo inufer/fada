@@ -126,7 +126,7 @@ public class O_nlogn {
 	        if (n < 2) {
 	            return;
 	        }
-	        int mid = n / 2;
+	        int mid = (n / 2);
 	        int[] l = new int[mid];
 	        String[] ln = new String[mid];
 	        int[] r = new int[n-mid];
