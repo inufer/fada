@@ -23,7 +23,7 @@ class O_n{
     
     public O_n(int no,int p,int e, String[] a, int[] g,String[][] apr,String[][][] pa){      
         
-    	
+    	double inicio = System.currentTimeMillis();
     	n=no;
         m=p;
         k=e;
@@ -168,7 +168,11 @@ class O_n{
                 	v++;
                 }
         
-        
+                double fin = System.currentTimeMillis();
+                
+                double tiempo = (double) ((fin - inicio));
+                 
+                System.out.println("tiempo de ejecucion "+tiempo +"milisegundos\n");
         
     }
     
@@ -285,3 +289,4 @@ class O_n{
     
     
     
+}
