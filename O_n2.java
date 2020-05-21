@@ -14,82 +14,160 @@ import java.util.Arrays;
 
 public class O_n2 {
         
-		private int n,m,k;
-	    private String[] anim;
-	    private int[]grand;
-	    private String[][]aper;
-	    private String[][][]part;    
-	    
-	    public O_n2(int no,int p,int e, String[] a, int[] g,String[][] apr,String[][][] pa){      
-	        n=no; //6
-	        m=p;  //3
-	        k=e;  //2
-	        int auxn;
-	        anim= new String[n];
-	        grand=new int[n];
-	        aper=new String[(m-1)*k][3];
-	        part=new String[m-1][k][3];
-	        int[] aux = new int[3];
-	        int[] aux2 = new int[k];
-	        for (int i=0;i<n;i++){
-	            anim[i]=a[i];
-	            grand[i]=g[i];
-	        }
-	        sort(grand,anim,0,n);
-	        for (int i=0;i<((m-1)*k);i++){
-	            for (int j=0;j<3;j++){
-	                aper[i][j]=apr[i][j];
-	                auxn=indf(aper[i][j]);
-	                aux[j]=auxn;
-	            }
-	            sort(aux,aper[i],0,((m-1)*k)-1);
-	            
-	        }
-	        for (int i=0;i<(m-1);i++){
-	            for (int j=0;j<k;j++){
-	                for (int w=0;w<3;w++){
-	                part[i][j][w]=pa[i][j][w];
-	                auxn=indf(part[i][j][w]);
-	                aux[w]=auxn;
-	                aux2[j]=aux2[j]+auxn;
-	                }
-	                sort(aux,part[i][j],0,3);
-	            }
-	            sortar(aux2,part[i],0,k-1);
-	        }
-	        
-	        System.out.print("la presentacion tiene "+n+" animales en total,y consta de "+m+" partes de "
-	                +k+" escenas \n");
-	                
-	                System.out.print("el orden en el que hace la prsentacion es: \n");
-	                
-	                System.out.print("apertura :");
-	                
-	                for(int w=((m-1)*k)-1;w>=0;w--) {
-	                	System.out.print("[ ");
-	                	for(int t=0;t<3;t++) {
-	                		System.out.print(aper[w][t]+ ", ");
-	                	}
-	                	System.out.print("] ");
-	                }
-                        
-                        System.out.print("\n");
-                        
-	                for(int w=(m-2);w>=0;w--) {
-                            int d = m-w-1;
-	                	System.out.print("parte"+d+": ");
-	                	for(int t=0;t<k;t++) {
-	                		System.out.print("escena"+k+": [ ");
-	                		for(int f=0;f<3;f++) {
-	                			System.out.print( part[w][t][f] +", ");
-	                		}
-                                 System.out.print("] ");     
-	                	}
-	                	System.out.print("\n");
-	                }
-	                
-	        
-	        
+	private int n,m,k;
+    private String[] anim;
+    private int[] grand,apar,pos;
+    private String[][]aper;
+    private String[][][]part;    
+    
+    public O_n2(int no,int p,int e, String[] a, int[] g,String[][] apr,String[][][] pa){      
+        
+    	
+    	n=no;
+        m=p;
+        k=e;
+        int auxn,smge=0,smgt=0,mygr=0,mngr=1000000000;
+        String[] myes = new String[3];
+        String[] mnes = new String[3];
+        apar= new int[n];
+        pos= new int[n];
+        anim= new String[n];
+        grand=new int[n];
+        aper=new String[(m-1)*k][3];
+        part=new String[m-1][k][3];
+        int[] aux = new int[3];
+        int[] aux2 = new int[k];
+        for (int i=0;i<n;i++){
+            anim[i]=a[i];
+            grand[i]=g[i];
+            apar[i]=0;
+            pos[i]=i;
+        }
+        sort(grand,anim,0,n);
+        for (int i=0;i<((m-1)*k);i++){
+            for (int j=0;j<3;j++){
+                aper[i][j]=apr[i][j];
+                auxn=indf(aper[i][j]);
+                apar[auxn]+=1;
+                aux[j]=auxn;
+                smge+=grand[auxn];
+            }
+           
+            if(smge<mngr) {
+            	mngr=smge;
+            	for (int f=0;f<3;f++) {
+            		mnes[f]=a[aux[f]];
+            	}
+            }
+            if(smge>mygr) {
+            	mygr=smge;
+            	for (int f=0;f<3;f++) {
+            		myes[f]=a[aux[f]];
+            	}
+            }
+            sort(aux,aper[i],0,((m-1)*k)-1);
+            smgt+=smge;
+            smge=0;
+            
+        }
+        for (int i=0;i<(m-1);i++){
+            for (int j=0;j<k;j++){
+                for (int w=0;w<3;w++){
+                part[i][j][w]=pa[i][j][w];
+                auxn=indf(part[i][j][w]);
+                apar[auxn]+=1;
+                aux[w]=auxn;
+                aux2[j]=aux2[j]+auxn;
+                smge+=grand[auxn];
+                }
+                if(smge<mngr) {
+                	mngr=smge;
+                	for (int f=0;f<3;f++) {
+                		mnes[f]=a[aux[f]];
+                	}
+                }
+                if(smge>mygr) {
+                	mygr=smge;
+                	for (int f=0;f<3;f++) {
+                		myes[f]=a[aux[f]];
+                	}
+                }
+                sort(aux,part[i][j],0,3);
+                smgt+=smge;
+                smge=0;
+                
+            }
+            sortar(aux2,part[i],0,k-1);
+            
+            
+        }
+        sort(apar,anim,0,n);
+        
+        System.out.print(smgt+"\n");
+        smgt=(smgt/(2*(k*(m-1))));
+        
+        System.out.print("la presentacion tiene "+n+" animales en total,y consta de "+m+" partes de "
+                +k+" escenas \n");
+                
+                System.out.print("el orden en el que hace la prsentacion es: \n");
+                
+                System.out.print("apertura :");
+                
+                for(int w=((m-1)*k)-1;w>=0;w--) {
+                	System.out.print("[ ");
+                	for(int t=0;t<3;t++) {
+                		System.out.print(aper[w][t]+ ", ");
+                	}
+                	System.out.print("] ");
+                }
+                    
+                    System.out.print("\n");
+                    
+                for(int w=(m-2);w>=0;w--) {
+                        int d = m-w-1;
+                	System.out.print("parte"+d+": ");
+                	for(int t=0;t<k;t++) {
+                		System.out.print("escena"+k+": [ ");
+                		for(int f=0;f<3;f++) {
+                			System.out.print( part[w][t][f] +", ");
+                		}
+                             System.out.print("] ");     
+                	}
+                	System.out.print("\n");
+                }
+                
+                System.out.print("El Promedio de las escenas es: "+smgt+"\n");
+                
+                System.out.print("La escena de mayor grandeza es: \n");
+                
+                for(int f=0;f<3;f++) {
+        			System.out.print( myes[f] +", ");
+                }
+                
+                System.out.print("\n La escena de menor grandeza es: \n");
+                
+                for(int f=0;f<3;f++) {
+        			System.out.print( mnes[f] +", ");
+                }
+                
+                
+                System.out.print("\n el animal que mas aparece es: \n");
+                int v = 0;
+                System.out.print( anim[v] +"\n ");
+                while(apar[v]==apar[v+1]) {
+                	System.out.print( anim[v+1] +"\n ");
+                	v++;
+                }
+                System.out.print("\n el animal que menos aparece es: \n");
+                v = n -1;
+                System.out.print( anim[v] +"\n ");
+                while(apar[v]==apar[v-1]) {
+                	System.out.print( anim[v-1] +"\n ");
+                	v--;
+                }
+                
+        
+        
 	        
 	    }
 	    
@@ -99,7 +177,7 @@ public class O_n2 {
             int temp;
             String tmp;
             int aux;
-            int pi = a[h];  
+            int pi = a[h-1];  
             int i = (l-1); 
             for (int j=l; j<h; j++) 
             { 
