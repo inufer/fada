@@ -14,6 +14,7 @@ import java.util.Arrays;
 
 public class O_nlogn {
 	
+	
 	private int n,m,k;
     private String[] anim;
     private int[] grand,apar,pos;
@@ -22,6 +23,7 @@ public class O_nlogn {
 	    
 	    public O_nlogn(int no,int p,int e, String[] a, int[] g,String[][] apr,String[][][] pa){      
 
+	    	double inicio = System.currentTimeMillis();
 	    	n=no;
 	        m=p;
 	        k=e;
@@ -162,6 +164,13 @@ public class O_nlogn {
 	                	System.out.print( anim[v+1] +"\n ");
 	                	v++;
 	                }
+	                
+	                double fin = System.currentTimeMillis();
+	                
+	                
+	                double tiempo = (double) ((fin - inicio));
+	                 
+	                System.out.println("tiempo de ejecucion "+tiempo +"milisegundos\n");
 	                
 	        
 	        
