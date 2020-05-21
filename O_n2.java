@@ -22,7 +22,7 @@ public class O_n2 {
     
     public O_n2(int no,int p,int e, String[] a, int[] g,String[][] apr,String[][][] pa){      
         
-    	
+    	double inicio = System.currentTimeMillis();
     	n=no;
         m=p;
         k=e;
@@ -166,7 +166,11 @@ public class O_n2 {
                 	v--;
                 }
                 
-        
+                double fin = System.currentTimeMillis();
+                
+                double tiempo = (double) ((fin - inicio));
+                 
+                System.out.println("tiempo de ejecucion "+tiempo +"milisegundos\n");
         
 	        
 	    }
