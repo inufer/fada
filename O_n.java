@@ -1,23 +1,7 @@
-package ProyectoFada;
 
-import java.util.Arrays;
-
-/**
- * para la complejidad O(n) se usara el counting sort para hacerlo,
- * modificandolo para que ordene el array de los nombres en funcion de su
- * importancia
- * 
- * @author CamiloRosero
- * @author MariaArroyo
- * @author JoseErazo
- * 
- */
- 
-class O_n{ 
-    
     private int n,m,k;
     private String[] anim;
-    private int[]grand;
+    private int[] grand,apar,pos;
     private String[][]aper;
     private String[][][]part;    
     
@@ -27,7 +11,11 @@ class O_n{
     	n=no;
         m=p;
         k=e;
-        int auxn,smg;
+        int auxn,smge=0,smgt=0,mygr=0,mngr=1000000000;
+        String[] myes = new String[3];
+        String[] mnes = new String[3];
+        apar= new int[n];
+        pos= new int[n];
         anim= new String[n];
         grand=new int[n];
         aper=new String[(m-1)*k][3];
@@ -37,15 +25,34 @@ class O_n{
         for (int i=0;i<n;i++){
             anim[i]=a[i];
             grand[i]=g[i];
+            apar[i]=0;
+            pos[i]=i;
         }
         sort(grand,anim);
         for (int i=0;i<((m-1)*k);i++){
             for (int j=0;j<3;j++){
                 aper[i][j]=apr[i][j];
                 auxn=indf(aper[i][j]);
+                apar[auxn]+=1;
                 aux[j]=auxn;
+                smge+=grand[auxn];
+            }
+           
+            if(smge<mngr) {
+            	mngr=smge;
+            	for (int f=0;f<3;f++) {
+            		mnes[f]=a[aux[f]];
+            	}
+            }
+            if(smge>mygr) {
+            	mygr=smge;
+            	for (int f=0;f<3;f++) {
+            		myes[f]=a[aux[f]];
+            	}
             }
             sort(aux,aper[i]);
+            smgt+=smge;
+            smge=0;
             
         }
         for (int i=0;i<(m-1);i++){
@@ -53,13 +60,36 @@ class O_n{
                 for (int w=0;w<3;w++){
                 part[i][j][w]=pa[i][j][w];
                 auxn=indf(part[i][j][w]);
+                apar[auxn]+=1;
                 aux[w]=auxn;
                 aux2[j]=aux2[j]+auxn;
+                smge+=grand[auxn];
+                }
+                if(smge<mngr) {
+                	mngr=smge;
+                	for (int f=0;f<3;f++) {
+                		mnes[f]=a[aux[f]];
+                	}
+                }
+                if(smge>mygr) {
+                	mygr=smge;
+                	for (int f=0;f<3;f++) {
+                		myes[f]=a[aux[f]];
+                	}
                 }
                 sort(aux,part[i][j]);
+                smgt+=smge;
+                smge=0;
+                
             }
             sortar(aux2,part[i]);
+            
+            
         }
+        sort(apar,anim);
+        
+        System.out.print(smgt+"\n");
+        smgt=(smgt/(2*(k*(m-1))));
         
         System.out.print("la presentacion tiene "+n+" animales en total,y consta de "+m+" partes de "
                 +k+" escenas \n");
@@ -90,6 +120,37 @@ class O_n{
                 	}
                 	System.out.print("\n");
                 }
+                
+                System.out.print("El Promedio de las escenas es: "+smgt+"\n");
+                
+                System.out.print("La escena de mayor grandeza es: \n");
+                
+                for(int f=0;f<3;f++) {
+        			System.out.print( myes[f] +", ");
+                }
+                
+                System.out.print("\n La escena de menor grandeza es: \n");
+                
+                for(int f=0;f<3;f++) {
+        			System.out.print( mnes[f] +", ");
+                }
+                
+                
+                System.out.print("\n el animal que mas aparece es: \n");
+                int v = 0;
+                System.out.print( anim[v] +"\n ");
+                while(apar[v]==apar[v+1]) {
+                	System.out.print( anim[v+1] +"\n ");
+                	v++;
+                }
+                System.out.print("\n el animal que menos aparece es: \n");
+                v = n -1;
+                System.out.print( anim[v] +"\n ");
+                while(apar[v]==apar[v-1]) {
+                	System.out.print( anim[v-1] +"\n ");
+                	v--;
+                }
+                
         
         
         
