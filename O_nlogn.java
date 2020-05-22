@@ -99,17 +99,21 @@ public class O_nlogn {
 	            }
 	            sortar(aux2,part[i],k-1);
 	        }
-	        sort(apar,anim,n);
 	        
-	        System.out.print(smgt+"\n");
+	        System.out.print("la presentacion tiene "+n+" animales, asi:");
+	        
+	        for (int t=0;t<anim.length;t++) {
+	        	System.out.print(anim[t]+", ");
+	        }
+	        
+	        sort(apar,anim,n);
 	        smgt=(smgt/(2*(k*(m-1))));
 	        
-	        System.out.print("la presentacion tiene "+n+" animales en total,y consta de "+m+" partes de "
-	                +k+" escenas \n");
-	                
-	                System.out.print("el orden en el que hace la prsentacion es: \n");
-	                
-	                System.out.print("apertura :");
+	        System.out.print("\n consta de " + m + " partes de " + k + " escenas \n");
+            
+            System.out.print("el orden en el que hace la presentacion es: \n");
+            
+            System.out.print("apertura :");
 	                
 	                for(int w=((m-1)*k)-1;w>=0;w--) {
 	                	System.out.print("[ ");
@@ -151,17 +155,17 @@ public class O_nlogn {
 	                
 	               
 	                System.out.print("\n el animal que mas aparece es: \n");
-	                int v = n -1;
-	                System.out.print( anim[v] +"\n ");
+	                int v = n - 1;
+	                System.out.print( anim[v] +", ");
 	                while(apar[v]==apar[v-1]) {
-	                	System.out.print( anim[v-1] +"\n ");
+	                	System.out.print( anim[v-1] +", ");
 	                	v--;
 	                }
 	                System.out.print("\n el animal que menos aparece es: \n");
 	                v = 0;
-	                System.out.print( anim[v] +"\n ");
+	                System.out.print( anim[v] +", ");
 	                while(apar[v]==apar[v+1]) {
-	                	System.out.print( anim[v+1] +"\n ");
+	                	System.out.print( anim[v+1] +", ");
 	                	v++;
 	                }
 	                
@@ -170,7 +174,7 @@ public class O_nlogn {
 	                
 	                double tiempo = (double) ((fin - inicio));
 	                 
-	                System.out.println("tiempo de ejecucion "+tiempo +"milisegundos\n");
+	                System.out.println("\n tiempo de ejecucion "+tiempo +"milisegundos\n");
 	                
 	        
 	        
@@ -308,3 +312,4 @@ public class O_nlogn {
 	    
 	    
 }
+
