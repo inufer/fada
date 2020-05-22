@@ -1,0 +1,239 @@
+prueba 1 con complejidad n 
+la presentacion tiene 6 animales, asi:ciempies, libelula, gato, perro, tapir, nutria, 
+ consta de 3 partes de 2 escenas 
+el orden en el que hace la prsentacion es: 
+apertura :[ ciempies, libelula, gato, ] [ ciempies, gato, tapir, ] [ gato, perro, tapir, ] [ perro, tapir, nutria, ] 
+parte1: escena2: [ ciempies, libelula, gato, ] escena2: [ gato, perro, tapir, ] 
+parte2: escena2: [ ciempies, gato, tapir, ] escena2: [ perro, tapir, nutria, ] 
+El Promedio de las escenas es: 10
+La escena de mayor grandeza es: 
+perro, tapir, nutria, 
+ La escena de menor grandeza es: 
+ciempies, gato, libelula, 
+ el animal que mas aparece es: 
+gato, tapir, 
+ el animal que menos aparece es: 
+nutria, libelula, 
+ tiempo de ejecucion 2.0milisegundos
+
+
+ 
+prueba 1 con complejidad n2 
+la presentacion tiene 6 animales, asi:libelula, gato, ciempies, tapir, nutria, perro, 
+ consta de 3 partes de 2 escenas 
+el orden en el que hace la prsentacion es: 
+apertura :[ gato, libelula, ciempies, ] [ ciempies, gato, tapir, ] [ tapir, gato, perro, ] [ tapir, perro, nutria, ] 
+parte1: escena2: [ tapir, gato, perro, ] escena2: [ gato, libelula, ciempies, ] 
+parte2: escena2: [ ciempies, gato, tapir, ] escena2: [ tapir, perro, nutria, ] 
+El Promedio de las escenas es: 10
+La escena de mayor grandeza es: 
+nutria, perro, tapir, 
+ La escena de menor grandeza es: 
+libelula, ciempies, gato, 
+ el animal que mas aparece es: 
+perro, 
+ el animal que menos aparece es: 
+nutria, 
+ tiempo de ejecucion 2.0milisegundos
+
+
+ 
+prueba 1 con complejidad nlogn 
+la presentacion tiene 6 animales, asi:ciempies, libelula, gato, perro, tapir, nutria, 
+ consta de 3 partes de 2 escenas 
+el orden en el que hace la presentacion es: 
+apertura :[ ciempies, libelula, gato, ] [ ciempies, gato, tapir, ] [ gato, perro, tapir, ] [ perro, tapir, nutria, ] 
+parte1: escena2: [ ciempies, libelula, gato, ] escena2: [ gato, perro, tapir, ] 
+parte2: escena2: [ perro, tapir, nutria, ] escena2: [ ciempies, gato, tapir, ] 
+El Promedio de las escenas es: 10
+La escena de mayor grandeza es: 
+perro, tapir, nutria, 
+ La escena de menor grandeza es: 
+ciempies, gato, libelula, 
+ el animal que mas aparece es: 
+tapir, gato, 
+ el animal que menos aparece es: 
+libelula, nutria, 
+ tiempo de ejecucion 0.0milisegundos
+
+
+ 
+prueba 2 con complejidad n 
+la presentacion tiene 8 animales, asi:ciempies, libelula, gato, perro, tapir, nutria, oso, dragon, 
+ consta de 3 partes de 2 escenas 
+el orden en el que hace la prsentacion es: 
+apertura :[ ciempies, libelula, gato, ] [ ciempies, gato, tapir, ] [ gato, perro, tapir, ] [ perro, tapir, nutria, ] 
+parte1: escena2: [ ciempies, libelula, gato, ] escena2: [ gato, perro, tapir, ] 
+parte2: escena2: [ ciempies, gato, tapir, ] escena2: [ perro, tapir, nutria, ] 
+El Promedio de las escenas es: 10
+La escena de mayor grandeza es: 
+perro, tapir, nutria, 
+ La escena de menor grandeza es: 
+ciempies, gato, libelula, 
+ el animal que mas aparece es: 
+gato, tapir, 
+ el animal que menos aparece es: 
+dragon, oso, 
+ tiempo de ejecucion 1.0milisegundos
+
+
+ 
+prueba 2 con complejidad n2 
+la presentacion tiene 8 animales, asi:libelula, gato, ciempies, perro, nutria, tapir, dragon, oso, 
+ consta de 3 partes de 2 escenas 
+el orden en el que hace la prsentacion es: 
+apertura :[ gato, libelula, ciempies, ] [ ciempies, gato, tapir, ] [ gato, tapir, perro, ] [ perro, tapir, nutria, ] 
+parte1: escena2: [ gato, tapir, perro, ] escena2: [ gato, libelula, ciempies, ] 
+parte2: escena2: [ ciempies, gato, tapir, ] escena2: [ perro, tapir, nutria, ] 
+El Promedio de las escenas es: 10
+La escena de mayor grandeza es: 
+tapir, perro, nutria, 
+ La escena de menor grandeza es: 
+libelula, ciempies, gato, 
+ el animal que mas aparece es: 
+oso, 
+ el animal que menos aparece es: 
+dragon, 
+ tiempo de ejecucion 2.0milisegundos
+
+
+ 
+prueba 2 con complejidad nlogn 
+la presentacion tiene 8 animales, asi:ciempies, libelula, gato, perro, tapir, nutria, oso, dragon, 
+ consta de 3 partes de 2 escenas 
+el orden en el que hace la presentacion es: 
+apertura :[ ciempies, libelula, gato, ] [ ciempies, gato, tapir, ] [ gato, perro, tapir, ] [ perro, tapir, nutria, ] 
+parte1: escena2: [ ciempies, libelula, gato, ] escena2: [ gato, perro, tapir, ] 
+parte2: escena2: [ perro, tapir, nutria, ] escena2: [ ciempies, gato, tapir, ] 
+El Promedio de las escenas es: 10
+La escena de mayor grandeza es: 
+perro, tapir, nutria, 
+ La escena de menor grandeza es: 
+ciempies, gato, libelula, 
+ el animal que mas aparece es: 
+tapir, gato, 
+ el animal que menos aparece es: 
+oso, dragon, 
+ tiempo de ejecucion 1.0milisegundos
+
+prueba 3 con complejidad n 
+la presentacion tiene 12 animales, asi:ciempies, libelula, gato, perro, tapir, nutria, marsupial, jabali, ruiseñor, cuervo, aguilucho, basilisco, 
+ consta de 3 partes de 2 escenas 
+el orden en el que hace la prsentacion es: 
+apertura :[ ciempies, libelula, gato, ] [ ciempies, gato, tapir, ] [ gato, perro, tapir, ] [ perro, tapir, nutria, ] 
+parte1: escena2: [ ciempies, libelula, gato, ] escena2: [ gato, perro, tapir, ] 
+parte2: escena2: [ ciempies, gato, tapir, ] escena2: [ perro, tapir, nutria, ] 
+El Promedio de las escenas es: 10
+La escena de mayor grandeza es: 
+perro, tapir, nutria, 
+ La escena de menor grandeza es: 
+ciempies, gato, libelula, 
+ el animal que mas aparece es: 
+gato, tapir, 
+ el animal que menos aparece es: 
+basilisco, aguilucho, cuervo, ruiseñor, jabali, marsupial, 
+ tiempo de ejecucion 2.0milisegundos
+
+
+ 
+prueba 3 con complejidad n2 
+la presentacion tiene 12 animales, asi:libelula, gato, ciempies, perro, nutria, tapir, jabali, basilisco, ruiseñor, aguilucho, cuervo, marsupial, 
+ consta de 3 partes de 2 escenas 
+el orden en el que hace la prsentacion es: 
+apertura :[ gato, libelula, ciempies, ] [ ciempies, gato, tapir, ] [ gato, tapir, perro, ] [ perro, tapir, nutria, ] 
+parte1: escena2: [ gato, tapir, perro, ] escena2: [ gato, libelula, ciempies, ] 
+parte2: escena2: [ ciempies, gato, tapir, ] escena2: [ perro, tapir, nutria, ] 
+El Promedio de las escenas es: 10
+La escena de mayor grandeza es: 
+tapir, perro, nutria, 
+ La escena de menor grandeza es: 
+libelula, ciempies, gato, 
+ el animal que mas aparece es: 
+marsupial, 
+ el animal que menos aparece es: 
+cuervo, aguilucho, ruiseñor, basilisco, jabali, 
+ tiempo de ejecucion 0.0milisegundos
+
+
+ 
+prueba 3 con complejidad nlogn 
+la presentacion tiene 12 animales, asi:ciempies, libelula, gato, perro, tapir, nutria, marsupial, jabali, ruiseñor, cuervo, aguilucho, basilisco, 
+ consta de 3 partes de 2 escenas 
+el orden en el que hace la presentacion es: 
+apertura :[ ciempies, libelula, gato, ] [ ciempies, gato, tapir, ] [ gato, perro, tapir, ] [ perro, tapir, nutria, ] 
+parte1: escena2: [ ciempies, libelula, gato, ] escena2: [ gato, perro, tapir, ] 
+parte2: escena2: [ perro, tapir, nutria, ] escena2: [ ciempies, gato, tapir, ] 
+El Promedio de las escenas es: 10
+La escena de mayor grandeza es: 
+perro, tapir, nutria, 
+ La escena de menor grandeza es: 
+ciempies, gato, libelula, 
+ el animal que mas aparece es: 
+tapir, gato, 
+ el animal que menos aparece es: 
+marsupial, jabali, ruiseñor, cuervo, aguilucho, basilisco, 
+ tiempo de ejecucion 1.0milisegundos
+
+
+ 
+prueba  4 con complejidad n 
+la presentacion tiene 21 animales, asi:ciempies, libelula, gato, perro, tapir, nutria, flerken, comunista, pinguino, iguana, gargola, hormiga, camello, aguila, panda, guacamayo, camaleon, oso, canario, tigre, caballo, 
+ consta de 3 partes de 2 escenas 
+el orden en el que hace la prsentacion es: 
+apertura :[ ciempies, libelula, gato, ] [ ciempies, gato, tapir, ] [ gato, perro, tapir, ] [ perro, tapir, nutria, ] 
+parte1: escena2: [ ciempies, libelula, gato, ] escena2: [ gato, perro, tapir, ] 
+parte2: escena2: [ ciempies, gato, tapir, ] escena2: [ perro, tapir, nutria, ] 
+El Promedio de las escenas es: 10
+La escena de mayor grandeza es: 
+perro, tapir, nutria, 
+ La escena de menor grandeza es: 
+ciempies, gato, libelula, 
+ el animal que mas aparece es: 
+gato, tapir, 
+ el animal que menos aparece es: 
+caballo, tigre, canario, oso, camaleon, guacamayo, panda, aguila, camello, hormiga, gargola, iguana, pinguino, comunista, flerken, 
+ tiempo de ejecucion 1.0milisegundos
+
+
+ 
+prueba 4 con complejidad n2 
+la presentacion tiene 21 animales, asi:libelula, gato, ciempies, perro, nutria, tapir, comunista, pinguino, tigre, hormiga, oso, panda, guacamayo, aguila, canario, iguana, camello, camaleon, gargola, caballo, flerken, 
+ consta de 3 partes de 2 escenas 
+el orden en el que hace la prsentacion es: 
+apertura :[ gato, libelula, ciempies, ] [ ciempies, gato, tapir, ] [ gato, tapir, perro, ] [ perro, tapir, nutria, ] 
+parte1: escena2: [ gato, tapir, perro, ] escena2: [ gato, libelula, ciempies, ] 
+parte2: escena2: [ ciempies, gato, tapir, ] escena2: [ perro, tapir, nutria, ] 
+El Promedio de las escenas es: 10
+La escena de mayor grandeza es: 
+tapir, perro, nutria, 
+ La escena de menor grandeza es: 
+libelula, ciempies, gato, 
+ el animal que mas aparece es: 
+flerken, 
+ el animal que menos aparece es: 
+caballo, gargola, camaleon, camello, iguana, canario, aguila, guacamayo, panda, oso, hormiga, tigre, pinguino, comunista, 
+ tiempo de ejecucion 1.0milisegundos
+
+
+ 
+prueba 4 con complejidad nlogn 
+la presentacion tiene 21 animales, asi:ciempies, libelula, gato, perro, tapir, nutria, flerken, comunista, pinguino, iguana, gargola, hormiga, camello, aguila, panda, guacamayo, camaleon, oso, canario, tigre, caballo, 
+ consta de 3 partes de 2 escenas 
+el orden en el que hace la presentacion es: 
+apertura :[ ciempies, libelula, gato, ] [ ciempies, gato, tapir, ] [ gato, perro, tapir, ] [ perro, tapir, nutria, ] 
+parte1: escena2: [ ciempies, libelula, gato, ] escena2: [ gato, perro, tapir, ] 
+parte2: escena2: [ perro, tapir, nutria, ] escena2: [ ciempies, gato, tapir, ] 
+El Promedio de las escenas es: 10
+La escena de mayor grandeza es: 
+perro, tapir, nutria, 
+ La escena de menor grandeza es: 
+ciempies, gato, libelula, 
+ el animal que mas aparece es: 
+tapir, gato, 
+ el animal que menos aparece es: 
+flerken, comunista, pinguino, iguana, gargola, hormiga, camello, aguila, panda, guacamayo, camaleon, oso, canario, tigre, caballo, 
+ tiempo de ejecucion 1.0milisegundos
+
+
+ 
+
